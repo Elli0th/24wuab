@@ -11,18 +11,20 @@ div {
 }
 
 nav {
-  background: #333;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
 }
 
 .nav-links {
+  color: #333;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 50%;
   text-transform: uppercase;
+
 }
 
 .nav-links a {
@@ -30,10 +32,8 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  border-bottom: 2px solid transparent;
   transition: 0.5s ease;
   transform: translateX(0%);
-
 }
 
 
@@ -64,22 +64,21 @@ nav {
   .nav-links {
     position: absolute;
     right: 0;
-    top: 8vh;
-    min-height: 92vh;
+    top: 0vh;
+    min-height: 100vh;
     background: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 50%;
+    width: 60%;
     margin: 0;
     padding: 0;
     transform: translateX(100%);
     transition: All 0.5s ease-in;
+    justify-content: space-evenly;
   }
 
   .nav-links a {
     opacity: 0;
-
   }
 
   .burger {
@@ -144,6 +143,7 @@ nav {
   /* Ensure positioning context */
   z-index: 2;
   /* Ensure logo appears above burger menu */
+  text-align: center;
 }
 
 .nav-active .logo {
@@ -152,9 +152,56 @@ nav {
 }
 
 #instagram {
-  width: 50px;
+  width: 4.6875rem;
 }
 
 .hidden {
   display: none;
+}
+
+
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.btn {
+  padding: 0px 80px;
+  /* Initial padding */
+  border: none;
+  border-radius: 12px;
+  transition: padding 0.5s ease;
+  /* Transition for padding change */
+  height: 46px;
+  /* Include padding in the element's height */
+}
+
+.btn:hover {
+  padding: 0 120px;
+  /* Increased padding on hover */
+  color: white;
+  background-color: red;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-main {
+  font-size: 2.8rem;
+  color: white;
+  font-style: italic;
+  text-align: center;
 }
