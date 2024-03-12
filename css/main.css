@@ -14,11 +14,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+}
+
+img {
+  width: 100%;
 }
 
 .nav-links {
-  color: #333;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -31,15 +33,17 @@ nav {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   transition: 0.5s ease;
   transform: translateX(0%);
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 
 
 .nav-links a:hover {
-  color: #38b8ff;
+  color: red;
   letter-spacing: 5px;
 }
 
@@ -48,10 +52,10 @@ nav {
 }
 
 .burger div {
-  width: 25px;
-  height: 3px;
+  width: 35px;
+  height: 4.2px;
   background: #fff;
-  margin: 5px;
+  margin: 6.2px;
   transition: all 0.5s ease;
 }
 
@@ -66,7 +70,7 @@ nav {
     right: 0;
     top: 0vh;
     min-height: 100vh;
-    background: #333;
+    background: #000;
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -75,10 +79,13 @@ nav {
     transform: translateX(100%);
     transition: All 0.5s ease-in;
     justify-content: space-evenly;
+    opacity: 85%;
+
   }
 
   .nav-links a {
     opacity: 0;
+    color: #fff;
   }
 
   .burger {
@@ -105,6 +112,16 @@ nav {
   }
 }
 
+@media only screen and (min-width: 760px) {
+  .slide-1 {
+    top: -70% !important;
+  }
+
+  .slide-2 {
+    top: -60% !important;
+  }
+}
+
 .nav-active {
   transform: translateX(0);
 }
@@ -122,7 +139,7 @@ nav {
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-7px, 7px);
 }
 
 .toggle .line2 {
@@ -130,7 +147,7 @@ nav {
 }
 
 .toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-7px, -7px);
 }
 
 .logoImage {
@@ -190,18 +207,44 @@ nav {
   /* Include padding in the element's height */
 }
 
+.btn-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 .btn:hover {
-  padding: 0 120px;
+  padding: 0 100px;
   /* Increased padding on hover */
   color: white;
-  background-color: red;
-  font-size: 1rem;
+  background-color: #000;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .text-main {
   font-size: 2.8rem;
-  color: white;
+  color: #fbfaf2;
   font-style: italic;
   text-align: center;
+}
+
+/* Add this CSS to position the slideshow behind the main page */
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Your CSS content */
+
+.my-slides {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
