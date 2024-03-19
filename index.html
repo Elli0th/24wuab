@@ -11,14 +11,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body id="index">
   <nav>
     <div class="logo">
-      <a href="#"><img class="logoImage" src="img/karraburgers_logo.png" alt="Hamburger logo"></a>
+      <a href="index.html" class="logo-link">
+        <img class="logo-image normal" src="img/burger_logo.webp" alt="black and white hamburger logo">
+        <img class="logo-image inverted hidden" src="img/burger_logo_inverted.webp"
+          alt="Hamburger logo with inverted colors">
+      </a>
     </div>
     <ul class="nav-links">
       <a href="#">Startsida</a>
-      <a href="#">Meny</a>
+      <a href="menu.html">Meny</a>
       <a href="#">Om oss</a>
       <a href="#">Kontakt</a>
       <a href="https://www.instagram.com/karraburgers/"><img id="instagram" src="img/instagram_logo.png"
@@ -41,7 +45,7 @@
     </div>
     <section class="main-page">
       <h1 class="content-main text-main">Välkommen Till Kärra Burgers</h1>
-      <button class="content-main btn btn-text">Meny</button>
+      <a href="menu.html"><button class="content-main btn btn-text">Meny</button></a>
     </section>
   </div>
   <script src="js/main.js"></script>

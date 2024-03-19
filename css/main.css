@@ -2,8 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  overflow: hidden;
   background: #111;
+}
+
+#index {
+  overflow: hidden;
 }
 
 div {
@@ -12,19 +15,22 @@ div {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 img {
-  width: 100%;
+  width: 100vw;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 50%;
+  width: 60%;
   text-transform: uppercase;
 
 }
@@ -112,15 +118,6 @@ img {
   }
 }
 
-@media only screen and (min-width: 760px) {
-  .slide-1 {
-    top: -70% !important;
-  }
-
-  .slide-2 {
-    top: -60% !important;
-  }
-}
 
 .nav-active {
   transform: translateX(0);
@@ -150,17 +147,18 @@ img {
   transform: rotate(45deg) translate(-7px, -7px);
 }
 
-.logoImage {
-  width: 50%;
+.logo-image {
+  width: 18%;
+  border-radius: 1.5rem;
 }
 
 .logo {
-  padding: 5px 0;
+  padding: 10px 50px;
   position: relative;
   /* Ensure positioning context */
   z-index: 2;
   /* Ensure logo appears above burger menu */
-  text-align: center;
+  text-align: left;
 }
 
 .nav-active .logo {
@@ -178,15 +176,20 @@ img {
 
 
 #wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  /* Remove position: absolute; */
+  /* Remove top: 0; */
+  /* Remove left: 0; */
+  /* Remove right: 0; */
+  /* Remove bottom: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: -1;
+  padding-top: 100px;
+  /* Adjust padding to allow space for navigation */
+  /* Add the following lines to allow scrolling */
+  height: 100%;
+  overflow-y: auto;
 }
 
 .main-page {
@@ -247,4 +250,16 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+.menu {
+  height: auto;
+  margin: 275px 0 0 0;
+  width: 100vw;
+  background-color: white;
+}
+
+.menu-items {
+  margin: 20px 0;
 }
