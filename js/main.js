@@ -85,3 +85,12 @@ changeMobileImages();
 
 // Listen for window resize events to adjust images if necessary
 window.addEventListener("resize", changeMobileImages);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollDownButton = document.getElementById("scroll-down-button");
+
+  scrollDownButton.addEventListener("click", function () {
+    const menuSection = document.querySelector(".menu");
+    menuSection.scrollIntoView({ behavior: "smooth" });
+  });
+});

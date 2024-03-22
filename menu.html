@@ -9,9 +9,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<body id="body-menu">
     <nav>
         <div class="logo">
             <a href="index.html" class="logo-link">
@@ -21,8 +26,8 @@
             </a>
         </div>
         <ul class="nav-links">
-            <a href="#">Startsida</a>
-            <a href="#">Meny</a>
+            <a href="index.html">Startsida</a>
+            <a href="menu.html">Meny</a>
             <a href="#">Om oss</a>
             <a href="#">Kontakt</a>
             <a href="https://www.instagram.com/karraburgers/"><img id="instagram" src="img/instagram_logo.png"
@@ -45,58 +50,125 @@
         </div>
         <section class="main-page">
             <h1 class="content-main text-main">Kärra Burgers Meny</h1>
+            <button id="scroll-down-button" class="btn btn-text">Gå Till Meny</button>
         </section>
     </div>
     <section class="menu">
         <section class="burgers">
-            <h2>Burgers</h2>
+            <h2 class="menu-title">Burgers</h2>
             <ul>
                 <article class="menu-items">
-                    <li>Kärra classic</li>
+                    <li class="item-name">Kärra classic</li>
                     <li>Kärradressing, krispsallad, picklad rödlök, cheddar, tomat</li>
                 </article>
                 <article class="menu-items">
-                    <li>Kärra Special</li>
+                    <li class="item-name">Kärra Special</li>
                     <li>tryffelmajonnäs, krispsallad, picklad rödlök, cheddar</li>
                 </article>
                 <article class="menu-items">
-                    <li>Kärra Special</li>
-                    <li>tryffelmajonnäs, krispsallad, picklad rödlök, cheddar</li>
-                </article>
-                <article class="menu-items">
-                    <li>Kärra Chesse</li>
+                    <li class="item-name">Kärra Chesse</li>
                     <li>Kärradressing, gul lök, saltgurka, cheddar, ketchup, senap</li>
                 </article>
                 <article class="menu-items">
-                    <li>Kärra Chesse</li>
-                    <li>Kärradressing, gul lök, saltgurka, cheddar, ketchup, senap</li>
-                </article>
-                <article class="menu-items">
-                    <li>Kärra Smokey</li>
+                    <li class="item-name">Kärra Smokey</li>
                     <li>BBQ-dressing, gul lök, saltgurka, cheddar, bacon, BBQ-sås</li>
                 </article>
                 <article class="menu-items">
-                    <li>Kärra Spicy</li>
+                    <li class="item-name">Kärra Spicy</li>
                     <li>Chilimajonnäs, saltgurka, cheddar, karamelliserad lök, bacon, BBQ-sås, rostad lök</li>
                 </article>
                 <article class="menu-items">
-                    <li>Kärra Jalapeño Cheese</li>
+                    <li class="item-name">Kärra Jalapeño Cheese</li>
                     <li>Chilimajonnäs, krispsallad, cheddar, färsk jalapeño, smashed chili cheese</li>
                 </article>
                 <article class="menu-items">
-                    <li>Kärra Blue</li>
+                    <li class="item-name">Kärra Blue</li>
                     <li>Vitlöksdressing, blåmögelost, karamelliserad lök, honung, lökringar</li>
                 </article>
                 <article class="menu-items">
-                    <li>Gästburgare Kärra Balkan</li>
+                    <li class="item-name">Gästburgare Kärra Balkan</li>
                     <li>Vitlöksmajonnäs, gul lök, röd spetspaprika, ajvar och fetaost</li>
                 </article>
             </ul>
         </section>
         <section class="annat-gött">
-
+            <h2 class="menu-title">Annat Gött</h2>
+            <ul>
+                <article class="menu-items">
+                    <li class="item-name">Halloumiburgare</li>
+                    <li>Kärradressing, krispsallad, gul lök, tomat</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Vegansk burgare</li>
+                    <li>Hamburgardressing, krispsallad, picklad rödlök, tomat</li>
+                </article>
+                <article class="menu-items scroll-pin">
+                    <li class="item-name">Kycklingburgare eller No chicken (veg)</li>
+                    <li>Kärradressing, krispsallad, gul lök, tomat, BBQ-sås</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Jalapeño Cheese Chicken eller No chicken (veg)</li>
+                    <li>Chilimajonnäs, krispsallad, cheddar, färsk jalapeño, smashed chili cheese</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Standardburgare 45g/90g/150g</li>
+                    <li>Kärradressing, krispsallad, saltgurka, gul lök, ketchup</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Kebabtallrik</li>
+                    <li>Pommes, krispsallad, gul lök, picklad rödlök…, tomat, valfri sås (mild/stark/vitlök)</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Nuggets (kyckling eller veg)</li>
+                    <li>6st, pommes, valfri dipp</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Barnmeny inkl. pommes, dryck</li>
+                    <li>Välj mellan Nuggets (kyckling eller veg) 4st eller Hamburgare</li>
+                </article>
+            </ul>
         </section>
-
+        <section class="sides">
+            <h2 class="menu-title">Sides</h2>
+            <ul>
+                <article class="menu-items">
+                    <li class="item-name">Dipp</li>
+                    <li>Vitlök, Tryffelmajonnäs, Chilimajonnäs, Kärradressing, Cheddar, Smokey, Honey Mustard</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Pommes</li>
+                    <li>Krispigt friterad svensk potatis</li>
+                </article>
+                <article class="menu-items scroll-pin">
+                    <li class="item-name">Sötpommes</li>
+                    <li>Djupfriterad svensk kvalitetspotatis</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Chili Cheese</li>
+                    <li>Toppa menyn med 4st heta chili cheese</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Mozarella sticks</li>
+                    <li>4 st, ett populärt alternativ till vår chili cheese</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Lökringar</li>
+                    <li>Friterade på Kärras vis, 4 st</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Hot Wings</li>
+                    <li>5 st rykande heta kycklingvingar</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Nuggets</li>
+                    <li>4 st friterade nuggets, välj kyckling eller vegetariska</li>
+                </article>
+                <article class="menu-items">
+                    <li class="item-name">Churros</li>
+                    <li>6 st söta kanel- och sockerslungade churros, serveras med chokladsås</li>
+                </article>
+            </ul>
+        </section>
     </section>
     <script src="js/main.js"></script>
 </body>

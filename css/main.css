@@ -1,8 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   background: #111;
+  overflow-x: hidden;
 }
 
 #index {
@@ -24,6 +25,10 @@ img {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -255,11 +260,21 @@ ul {
 
 .menu {
   height: auto;
-  margin: 275px 0 0 0;
+  margin: 250px 0 0 0;
   width: 100vw;
   background-color: white;
+  display: flex;
 }
 
 .menu-items {
-  margin: 20px 0;
+  margin: 25px 0;
+}
+
+.menu-title {
+  padding: 25px 0 5px 40px;
+}
+
+.item-name {
+  font-weight: 800;
+  margin: 0 0 6px 0;
 }
