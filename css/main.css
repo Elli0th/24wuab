@@ -31,6 +31,10 @@ li {
   letter-spacing: 2px;
 }
 
+h2 {
+  margin: 20px 0 5px 0;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-around;
@@ -123,6 +127,15 @@ li {
   }
 }
 
+@media only screen and (min-width: 760px) {
+  .slides-img-1 {
+    margin-top: -500px;
+  }
+
+  .slides-img-2 {
+    margin-top: -400px;
+  }
+}
 
 .nav-active {
   transform: translateX(0);
@@ -277,4 +290,26 @@ li {
 .item-name {
   font-weight: 800;
   margin: 0 0 6px 0;
+}
+
+#body-kontakt {
+  background-color: #fbfaf2;
+}
+
+.kontakt-link {
+  text-decoration-line: none;
+  color: #000;
+  font-weight: 800;
+}
+
+.kontakt-link:hover {
+  color: red;
+}
+
+#cards-wrapper {
+  display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: min-content;
+    height: 100vh;
+    width: calc(100vw - 16px);
 }

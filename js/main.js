@@ -2,7 +2,7 @@ const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links a");
-
+  // Koden för Animationen till hamburgemenyn är lånad
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
 
@@ -16,19 +16,16 @@ const navSlide = () => {
       }
     });
 
-    // Toggle visibility of the Instagram icon
-
     burger.classList.toggle("toggle");
   });
 };
 
 navSlide();
 
-// Your existing JavaScript code
-
 let slideIndex = 0;
 showSlides();
 
+// ett automatiskt bildspel som byter bild var 3e sekund
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("my-slides");
@@ -58,19 +55,19 @@ logoLink.addEventListener("mouseleave", () => {
 });
 
 const changeMobileImages = () => {
-  const slides = document.querySelectorAll(".my-slides img");
+  const slides = document.querySelectorAll(".my-slides-menu img");
   const windowWidth = window.innerWidth;
 
   slides.forEach((slide) => {
     if (windowWidth <= 780) {
-      // Change image sources for mobile size
+      // byter till mobil storlek på bilderna
       if (slide.alt === "Burger Meal") {
         slide.src = "img/burger_meal.webp";
       } else if (slide.alt === "A person holding a burger") {
         slide.src = "img/holding_burger.webp";
       }
     } else {
-      // Change back to original image sources for larger screens
+      // byter till desktop croppade bilder
       if (slide.alt === "Burger Meal") {
         slide.src = "img/burger_meal_16_by_9.webp";
       } else if (slide.alt === "A person holding a burger") {
@@ -80,10 +77,10 @@ const changeMobileImages = () => {
   });
 };
 
-// Call the function initially to set images according to screen size
+// Byter från desktop bild till mobil croppad bild och tvärtom beronde på screen-width i menu.html
 changeMobileImages();
 
-// Listen for window resize events to adjust images if necessary
+// Lysnar efter storleks förändring på fönstret
 window.addEventListener("resize", changeMobileImages);
 
 document.addEventListener("DOMContentLoaded", function () {
