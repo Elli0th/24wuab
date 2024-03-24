@@ -59,12 +59,12 @@ const changeMobileImages = () => {
   const windowWidth = window.innerWidth;
 
   slides.forEach((slide) => {
-    if (windowWidth <= 780) {
+    if (windowWidth <= 1024) {
       // byter till mobil storlek på bilderna
       if (slide.alt === "Burger Meal") {
-        slide.src = "img/burger_meal.webp";
+        slide.src = "img/burger_meal_mobile.png";
       } else if (slide.alt === "A person holding a burger") {
-        slide.src = "img/holding_burger.webp";
+        slide.src = "img/holding_burger_mobile.png";
       }
     } else {
       // byter till desktop croppade bilder
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const scrollDownButton = document.getElementById("scroll-down-button");
 
   scrollDownButton.addEventListener("click", function () {
-    const menuSection = document.querySelector(".menu");
+    const menuSection = document.querySelector("#menu");
     menuSection.scrollIntoView({ behavior: "smooth" });
   });
 });

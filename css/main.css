@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background: #111;
   overflow-x: hidden;
 }
@@ -35,13 +35,24 @@ h2 {
   margin: 20px 0 5px 0;
 }
 
+.logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 10%;
+  /* Let the logo take available space */
+}
+
 .nav-links {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 60%;
   text-transform: uppercase;
-
+  text-align: right;
+  margin-right: 20px;
+  z-index: 10;
 }
 
 .nav-links a {
@@ -54,8 +65,6 @@ h2 {
   font-size: 1.25rem;
   font-weight: 600;
 }
-
-
 
 .nav-links a:hover {
   color: red;
@@ -72,6 +81,7 @@ h2 {
   background: #fff;
   margin: 6.2px;
   transition: all 0.5s ease;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 760px) {
@@ -95,7 +105,6 @@ h2 {
     transition: All 0.5s ease-in;
     justify-content: space-evenly;
     opacity: 85%;
-
   }
 
   .nav-links a {
@@ -105,6 +114,11 @@ h2 {
 
   .burger {
     display: block;
+    z-index: 10;
+  }
+
+  .logo {
+    margin: 0px 0 0 -50px;
   }
 
 }
@@ -127,13 +141,10 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 760px) {
-  .slides-img-1 {
-    margin-top: -500px;
-  }
 
-  .slides-img-2 {
-    margin-top: -400px;
+@media only screen and (max-width: 1080px) {
+  .nav-links {
+    flex-grow: 10;
   }
 }
 
@@ -155,6 +166,7 @@ h2 {
 
 .toggle .line1 {
   transform: rotate(-45deg) translate(-7px, 7px);
+  background-color: #fff !important;
 }
 
 .toggle .line2 {
@@ -163,10 +175,11 @@ h2 {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-7px, -7px);
+  background-color: #fff !important;
 }
 
 .logo-image {
-  width: 18%;
+  width: 75px;
   border-radius: 1.5rem;
 }
 
@@ -181,7 +194,6 @@ h2 {
 
 .nav-active .logo {
   visibility: visible;
-  /* Ensure logo is visible when menu is active */
 }
 
 #instagram {
@@ -192,20 +204,12 @@ h2 {
   display: none;
 }
 
-
 #wrapper {
-  /* Remove position: absolute; */
-  /* Remove top: 0; */
-  /* Remove left: 0; */
-  /* Remove right: 0; */
-  /* Remove bottom: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: -1;
   padding-top: 100px;
-  /* Adjust padding to allow space for navigation */
-  /* Add the following lines to allow scrolling */
   height: 100%;
   overflow-y: auto;
 }
@@ -217,29 +221,41 @@ h2 {
   padding: 50px;
 }
 
+#index-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0 80px;
+  height: 50px;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#index-btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
 .btn {
-  padding: 0px 80px;
-  /* Initial padding */
+  width: 70%;
   border: none;
   border-radius: 12px;
   transition: padding 0.5s ease;
-  /* Transition for padding change */
-  height: 46px;
-  /* Include padding in the element's height */
+  height: 50px;
 }
 
 .btn-text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  color: black;
 }
 
 .btn:hover {
-  padding: 0 100px;
-  /* Increased padding on hover */
   color: white;
   background-color: #000;
   font-size: 1.5rem;
   font-weight: bold;
+  width: 80%;
 }
 
 .text-main {
@@ -249,7 +265,6 @@ h2 {
   text-align: center;
 }
 
-/* Add this CSS to position the slideshow behind the main page */
 .slideshow-container {
   position: absolute;
   top: 0;
@@ -258,8 +273,6 @@ h2 {
   height: 100%;
   z-index: -1;
 }
-
-/* Your CSS content */
 
 .my-slides {
   display: none;
@@ -271,12 +284,10 @@ h2 {
 }
 
 
-.menu {
-  height: auto;
-  margin: 250px 0 0 0;
-  width: 100vw;
-  background-color: white;
-  display: flex;
+
+#menu {
+  background-color: #fbfaf2;
+  margin: 150px 0 0 0;
 }
 
 .menu-items {
@@ -285,6 +296,10 @@ h2 {
 
 .menu-title {
   padding: 25px 0 5px 40px;
+}
+
+.sides {
+  margin-right: 50px;
 }
 
 .item-name {
@@ -296,6 +311,7 @@ h2 {
   background-color: #fbfaf2;
 }
 
+
 .kontakt-link {
   text-decoration-line: none;
   color: #000;
@@ -306,10 +322,127 @@ h2 {
   color: red;
 }
 
-#cards-wrapper {
+#cards-body {
+  background-color: #fbfaf2;
+  overflow-x: hidden;
+}
+
+#cards-wrapper,
+#menu {
   display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: min-content;
-    height: 100vh;
-    width: calc(100vw - 16px);
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: min-content;
+}
+
+.card-title {
+  grid-column: span 12;
+  text-align: left;
+  margin: 30px 0 0 50px;
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7,
+  .card-8,
+  .card-9,
+  .card-10,
+  .card-11,
+  .card-12 {
+    grid-column: span 3;
+    /* Make these cards span 2 columns */
+    justify-content: center;
+    margin: 30px 50px;
+    /* Center the content horizontally */
+  }
+
+  .burgers,
+  .annat-gött,
+  .sides {
+    grid-column: span 4;
+    margin: 0 20px;
+  }
+
+  .slide-img {
+    width: 120%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7,
+  .card-8,
+  .card-9,
+  .card-10,
+  .card-11,
+  .card-12 {
+    grid-column: span 4;
+    /* Make these cards span 2 columns */
+    justify-content: center;
+    margin: 30px 50px;
+    /* Center the content horizontally */
+  }
+
+  .burgers,
+  .annat-gött,
+  .sides {
+    grid-column: span 4;
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7,
+  .card-8,
+  .card-9,
+  .card-10,
+  .card-11,
+  .card-12 {
+    grid-column: span 6;
+    /* Make these cards span 2 columns */
+    justify-content: center;
+    margin: 30px 20px;
+    /* Center the content horizontally */
+  }
+
+  .card-title {
+    margin: 30px 0 0 20px;
+  }
+
+  .burgers,
+  .annat-gött,
+  .sides {
+    grid-column: span 12;
+    margin: 0 20px;
+  }
+
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.burger .burger-color {
+  background-color: #000;
 }
